@@ -1,137 +1,132 @@
-🔹 1. Download WSA Files
+==================================================
+
+STEP 1: DOWNLOAD WSA BUILDS
 
 Go to:
 https://github.com/MustardChef/WSABuilds
 
 Download:
 
-• WSA_2407.40000.4.0_x64_Release-Nightly-NoGApps-NoAmazon.7z
-• WSA_2407.40000.4.0_x64_Release-Nightly-GApps-13.0-NoAmazon.7z
+- WSA_2407.40000.4.0_x64_Release-Nightly-NoGApps-NoAmazon.7z
+- WSA_2407.40000.4.0_x64_Release-Nightly-GApps-13.0-NoAmazon.7z
 
-🔹 2. Extract No-GApps Version
+==================================================
 
-• Install 7-Zip or Nanazip
-• Right click → Extract the No-GApps file
-• Rename folder to: WSA
-• Move it to: Documents
+STEP 2: EXTRACT NO-GAPPS BUILD
 
-Example:
+1. Right click No-GApps file and extract
+2. Rename folder to: WSA
+3. Move it to:
+
 C:\Users\YourName\Documents\WSA
 
-🔹 3. Install Base WSA (If PowerShell Is Not in Right Click)
+==================================================
 
-Method A (Recommended):
+STEP 3: INSTALL BASE WSA
 
-• Open the WSA folder
-• Click the address bar at the top (where the folder path is)
-• Type: powershell
-• Press Enter
+1. Open WSA folder
+2. Click address bar
+3. Type: powershell
+4. Press Enter
 
-PowerShell will open in that folder.
-
-Then type:
+Run:
 
 .\Install.ps1
 
-Press Enter and wait.
+Wait until install finishes.
 
-Method B (Alternative):
+==================================================
 
-• Click Start
-• Type: PowerShell
-• Right click → Run as Administrator
-• In PowerShell type:
+STEP 4: CLOSE WSA
 
-cd C:\Users\YourName\Documents\WSA
+Close Windows Subsystem for Android
+Or end it in Task Manager
 
-(Replace YourName with your Windows username)
+==================================================
 
-Then run:
+STEP 5: INSTALL GOOGLE PLAY (GAPPS)
 
-.\Install.ps1
+1. Extract GApps archive
+2. Copy all files
+3. Paste into WSA folder
+4. Replace All
+5. Run Install.ps1 again
 
-• Wait until install finishes
-• Make sure WSA opens after install
+==================================================
 
-🔹 4. Close WSA
-
-• Close the app
-• Or End Task in Task Manager
-(Important before next step)
-
-🔹 5. Install Google Play (GApps)
-
-• Extract GApps file
-• Copy ALL files
-• Paste into WSA folder
-• Choose: Replace All
-
-• Run Install.ps1 again (same way as above)
-
-🔹 6. Download ADB (Android Tools)
+STEP 6: INSTALL ADB
 
 Download:
 https://dl.google.com/android/repository/platform-tools-latest-windows.zip
 
-• Extract ZIP
-• Move folder to:
+Extract to:
 
 C:\ADB
 
-Inside should be: platform-tools folder
+==================================================
 
-🔹 7. Add ADB to Windows PATH (IMPORTANT)
+STEP 7: ADD ADB TO PATH
 
-This lets Windows recognize “adb” command.
-
-1️⃣ Click Start
-2️⃣ Type: Environment Variables
-3️⃣ Open: Edit the system environment variables
-4️⃣ Click: Environment Variables
-5️⃣ Under “System Variables” find: Path
-6️⃣ Click Edit → New
-7️⃣ Paste:
+1. Open Start Menu
+2. Search: Environment Variables
+3. Open system environment variables
+4. Click Environment Variables
+5. Under System Variables select Path
+6. Click Edit > New
+7. Add:
 
 C:\ADB\platform-tools
 
-8️⃣ Click OK on everything
-9️⃣ Close CMD and open again
+8. Click OK and restart CMD
 
-🔹 8. Enable Developer Mode in WSA
+==================================================
 
-• Open Windows Subsystem for Android
-• Go to Settings
-• Turn ON: Developer Mode
+STEP 8: ENABLE DEVELOPER MODE
 
-🔹 9. Connect ADB to WSA
+Open Windows Subsystem for Android
+Open Settings
+Enable Developer Mode
 
-• Open CMD
-• Type:
+==================================================
 
-adb connect 127.0.0.1:58526
+STEP 9: CONNECT ADB
 
-• You will get a popup
-• Click Allow / Authorize
+Open CMD
 
-• Run command again:
+Type:
 
 adb connect 127.0.0.1:58526
 
-• It should say “connected”
+Authorize popup
 
-🔹 10. Enable Window Resize Support
+Run again:
 
-In CMD type:
+adb connect 127.0.0.1:58526
+
+You should see "connected"
+
+==================================================
+
+STEP 10: ENABLE WINDOW RESIZE
+
+Type in CMD:
 
 adb shell settings put global enable_freeform_support 1
 adb shell settings put global force_resizable_activities 1
 
-🔹 11. Install Eversolo Control
+==================================================
 
-• Open Play Store inside WSA
-• Log in to Google
-• Search: Eversolo Control
-• Install
+STEP 11: INSTALL EVERSOLO CONTROL
 
-✅ DONE.
-You can now use Eversolo Control on Windows.
+1. Open Play Store inside WSA
+2. Log in to Google
+3. Search: Eversolo Control
+4. Install
+
+==================================================
+
+FINISHED
+
+Eversolo Control now runs on Windows 11.
+
+==================================================
